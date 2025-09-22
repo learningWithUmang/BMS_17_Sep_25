@@ -6,3 +6,16 @@ public enum Feature {
     DOLBY_ATMOS,
     FOUR_DX
 }
+/*
+3_D = 0
+IMAX = 2
+DOLBY_ATMOS = 3
+
+you already have a db
+table for status
+string
+
+@enum (ordinal) for status
+hibernate
+
+ */
