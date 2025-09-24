@@ -7,8 +7,6 @@ import lombok.Setter;
 
 import java.util.List;
 
-@Getter
-@Setter
 @Entity(name = "shows")
 public class Show extends BaseModel{
     @ManyToOne
@@ -23,6 +21,46 @@ public class Show extends BaseModel{
     @Enumerated(EnumType.ORDINAL)
     @ElementCollection
     private List<Feature> features;
+
+    public Movie getMovie() {
+        return movie;
+    }
+
+    public void setMovie(Movie movie) {
+        this.movie = movie;
+    }
+
+    public Long getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(Long startTime) {
+        this.startTime = startTime;
+    }
+
+    public Long getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(Long endTime) {
+        this.endTime = endTime;
+    }
+
+    public Screen getScreen() {
+        return screen;
+    }
+
+    public void setScreen(Screen screen) {
+        this.screen = screen;
+    }
+
+    public List<Feature> getFeatures() {
+        return features;
+    }
+
+    public void setFeatures(List<Feature> features) {
+        this.features = features;
+    }
 }
 /*
 Show Movie
